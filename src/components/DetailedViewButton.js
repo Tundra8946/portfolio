@@ -123,7 +123,9 @@ const DetailedViewButton = ({ project }) => {
             )}
 
             <Modal isOpen={isImageModalOpen} onClose={closeImageModal} size="max-w-screen-xl max-h-screen">
-                <img
+                <Image
+                    width={1920}
+                    height={1080}
                     src={modalData?.exampleImage}
                     alt="Zoomed Example"
                     className="max-w-full max-h-full object-contain rounded-xl"
@@ -133,4 +135,4 @@ const DetailedViewButton = ({ project }) => {
     );
 };
 
-export { DetailedViewButton };
+export default DetailedViewButton;

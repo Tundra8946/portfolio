@@ -7,10 +7,10 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 xl:gap-24 md:items-center">
           <div>
             <h1 className="block text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white tracking-tight mb-4">
-              <span className="text-cyan-500">Tundra's</span> Portfolio
+              <span className="text-cyan-500">Tundra&lsquo;s</span> Portfolio
             </h1>
             <p className="mt-5 text-lg text-gray-700 dark:text-neutral-400">
-              Hi, I'm Tundra. I’m an experienced developer specializing in Node.js, but my skills extend across various programming languages, enabling me to create flexible and effective solutions for diverse needs. I’m passionate about innovation and dedicated to quality, always using the best tools and components to support entrepreneurs and propel their projects. Currently, I’m one of the lead developers at Stratos Tech.
+              Hi, I&lsquo;m Tundra. I&lsquo;m an experienced developer specializing in Node.js, but my skills extend across various programming languages, enabling me to create flexible and effective solutions for diverse needs. I’m passionate about innovation and dedicated to quality, always using the best tools and components to support entrepreneurs and propel their projects. Currently, I’m one of the lead developers at Stratos Tech.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-4">
