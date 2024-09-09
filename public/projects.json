@@ -17,36 +17,6 @@
             ]
         },
         {
-            "name": "Stratos Tech Dashboard",
-            "category": "Next.js Application",
-            "status": "Active",
-            "project": "stratos-tech-dashboard",
-            "icon": "https://cdn.stratostech.xyz/images/branding/Stratos.png",
-            "exampleImage": "https://cdn.stratostech.xyz/images/websites/Stratos-Tech-Dashboard.png",
-            "description": "A custom-built Next.js dashboard for Stratos Tech, designed to streamline the management of their various applications.",
-            "features": [
-                "Analytics Dashboard",
-                "API Token Management",
-                "Link Shortener Management",
-                "Discord Bot Management"
-            ]
-        },
-        {
-            "name": "Stratos Tech Bot",
-            "category": "Discord.js Bot",
-            "status": "Active",
-            "project": "stratos-tech-bot",
-            "icon": "https://cdn.stratostech.xyz/images/branding/Stratos.png",
-            "exampleImage": null,
-            "description": "A bespoke Discord bot developed for Stratos Tech to facilitate Discord server management and task automation.",
-            "features": [
-                "Custom API Integration",
-                "Welcome Message with Images",
-                "User Management System",
-                "Ticketing and Transcript System"
-            ]
-        },
-        {
             "name": "TFR Chapter 4 Website",
             "category": "WordPress Website",
             "status": "Active",
@@ -60,6 +30,22 @@
                 "Officers Directory",
                 "Downloadable Resources",
                 "Donation Statistics Dashboard"
+            ]
+        },
+        
+        {
+            "name": "Stratos Tech Bot",
+            "category": "Discord.js Bot",
+            "status": "Active",
+            "project": "stratos-tech-bot",
+            "icon": "https://cdn.stratostech.xyz/images/branding/Stratos.png",
+            "exampleImage": null,
+            "description": "A bespoke Discord bot developed for Stratos Tech to facilitate Discord server management and task automation.",
+            "features": [
+                "Custom API Integration",
+                "Welcome Message with Images",
+                "User Management System",
+                "Ticketing and Transcript System"
             ]
         },
         {
@@ -90,6 +76,21 @@
                 "User Activity Logs",
                 "Custom Embed/Message Sender",
                 "Bot Management Panel"
+            ]
+        },
+        {
+            "name": "Stratos Tech Dashboard",
+            "category": "Next.js Application",
+            "status": "Active",
+            "project": "stratos-tech-dashboard",
+            "icon": "https://cdn.stratostech.xyz/images/branding/Stratos.png",
+            "exampleImage": "https://cdn.stratostech.xyz/images/websites/Stratos-Tech-Dashboard.png",
+            "description": "A custom-built Next.js dashboard for Stratos Tech, designed to streamline the management of their various applications.",
+            "features": [
+                "Analytics Dashboard",
+                "API Token Management",
+                "Link Shortener Management",
+                "Discord Bot Management"
             ]
         }
     ]
