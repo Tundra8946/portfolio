@@ -1,9 +1,10 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-export default function GradientGenerator() {
+function GradientContent() {
     const searchParams = useSearchParams();
     const [isAuthorized, setIsAuthorized] = useState(false);
 
@@ -49,5 +50,13 @@ export default function GradientGenerator() {
                 <div className="h-20 w-full bg-gradient-to-r bg-gradient-green-blue from-green-400 to-blue-500"></div>
             </div>
         </div>
+    );
+}
+
+export default function GradientGenerator() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <GradientContent />
+        </Suspense>
     );
 }
