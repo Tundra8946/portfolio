@@ -87,51 +87,55 @@ const DetailedViewButton = ({ project }) => {
             )}
 
             {modalData && !loading && !error && (
-                <Modal isOpen={Boolean(modalData)} onClose={handleCloseProjectModal} size="max-w-4xl w-full h-full sm:h-auto sm:max-h-[90vh]">
-                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden h-full flex flex-col">
-                        <button
-                            className="absolute top-6 right-6 z-50 p-1 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 ease-in-out"
-                            onClick={handleCloseProjectModal}
-                            aria-label="Close modal"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                        <div className={`relative h-24 sm:h-32 bg-gradient-to-r ${modalData.gradient}`}>
+                <Modal isOpen={Boolean(modalData)} onClose={handleCloseProjectModal} size="max-w-5xl w-full h-full sm:h-auto sm:max-h-[90vh]">
+                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden h-full flex flex-col max-h-[90vh]">
+                        <div className={`relative h-32 sm:h-40 bg-gradient-to-r ${modalData.gradient} flex-shrink-0`}>
                             <Image
                                 src={modalData.icon}
                                 layout="fill"
                                 objectFit="contain"
-                                className="p-2"
+                                className="p-4"
                                 alt={`${modalData.name} icon`}
                             />
-
+                            <button
+                                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-white bg-opacity-20 text-white hover:bg-opacity-30 transition duration-300 ease-in-out"
+                                onClick={handleCloseProjectModal}
+                                aria-label="Close modal"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
                         </div>
-                        <div className="p-4 sm:p-6 overflow-y-auto flex-grow">
-                            <h2 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900 dark:text-gray-100">{modalData.name}</h2>
-                            <div className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                        <div className="p-6 sm:p-8 overflow-y-auto flex-grow">
+                            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">{modalData.name}</h2>
+                            <div className="text-base text-gray-600 dark:text-gray-300 mb-6">
                                 <JsxParser jsx={modalData.description} />
                             </div>
-                            <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 mb-3">
-                                <h3 className="text-base sm:text-lg font-semibold mb-1 text-gray-800 dark:text-gray-200">Features</h3>
-                                <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+                            <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-6 shadow-inner">
+                                <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200 text-center">Key Features</h3>
+                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     {modalData.features.map((item, index) => (
-                                        <li key={index} className="text-xs">{item}</li>
+                                        <li key={index} className="flex items-center text-base text-gray-600 dark:text-gray-300">
+                                            <svg className="w-5 h-5 mr-3 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span className="break-words">{item}</span>
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
                             {modalData.exampleImage && (
-                                <div className="rounded-lg overflow-hidden shadow-lg">
-                                    <h3 className="text-base sm:text-lg font-semibold mb-1 text-gray-800 dark:text-gray-200">Example</h3>
-                                    <div className="cursor-pointer" onClick={openImageModal}>
+                                <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-hidden shadow-lg">
+                                    <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200 text-center ">Example</h3>
+                                    <div className="cursor-pointer overflow-hidden rounded-xl" onClick={openImageModal}>
                                         <Image
                                             src={modalData.exampleImage}
                                             width={800}
                                             height={450}
                                             layout="responsive"
-                                            className="rounded-lg"
+                                            className="object-cover"
                                             alt="Example"
                                         />
                                     </div>

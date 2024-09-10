@@ -1,19 +1,34 @@
 {
     "projects": [
         {
-            "name": "Stratos Tech Website",
+            "name": "Acro Bot",
+            "category": "Discord.js Bot",
+            "status": "Active",
+            "project": "acro-bot",
+            "icon": "https://cdn.stratostech.xyz/images/websites/Acro.png",
+            "exampleImage": null,
+            "description": "A highly customized Discord bot engineered to optimize management processes and automate complex tasks within the Acro Discord server ecosystem.",
+            "features": [
+                "Advanced Custom API Integration",
+                "Comprehensive User Activity Monitoring",
+                "Versatile Embed and Message Creation Tools",
+                "Intuitive Bot Management Interface"
+            ],
+            "gradient": "bg-gradient-green-blue from-green-400 to-blue-500"
+        },
+        {
+            "name": "Stratos Tech Dashboard",
             "category": "Next.js Application",
             "status": "Active",
-            "project": "stratos-tech-website",
-            "url": "https://stratostech.xyz",
+            "project": "stratos-tech-dashboard",
             "icon": "https://cdn.stratostech.xyz/images/branding/Stratos.png",
-            "exampleImage": "https://cdn.stratostech.xyz/images/websites/Stratos-Tech-Website.png",
-            "description": "A custom-designed Next.js website developed for Stratos Tech, aimed at effectively showcasing their services.",
+            "exampleImage": "https://cdn.stratostech.xyz/images/websites/Stratos-Tech-Dashboard.png",
+            "description": "An advanced Next.js dashboard meticulously crafted for Stratos Tech, designed to optimize the management and monitoring of their diverse application portfolio.",
             "features": [
-                "Integrated Blog",
-                "Multi-page Layout",
-                "User-friendly Staff Directory Management",
-                "Administrative Control Panel"
+                "Comprehensive Analytics Dashboard",
+                "Secure API Token Management System",
+                "Advanced Link Shortener Administration",
+                "Centralized Discord Bot Management Interface"
             ],
             "gradient": "bg-gradient-blue-purple from-blue-500 to-purple-600"
         },
@@ -25,16 +40,15 @@
             "url": "https://tfrch4.org",
             "icon": "https://cdn.stratostech.xyz/images/branding/tfrch4.png",
             "exampleImage": "https://cdn.stratostech.xyz/images/websites/Tfrch4-Website.jpg",
-            "description": "A custom WordPress website created for The Freedom Riders Chapter 4 organization, designed to support their operations and outreach.",
+            "description": "A custom-tailored WordPress website developed for The Freedom Riders Chapter 4 organization, engineered to enhance operational efficiency and amplify community outreach initiatives.",
             "features": [
-                "Event Calendar Integration",
-                "Officers Directory",
-                "Downloadable Resources",
-                "Donation Statistics Dashboard"
+                "Sophisticated Event Calendar Integration",
+                "Comprehensive Officers Directory",
+                "Secure Document Repository",
+                "Real-time Donation Tracking Dashboard"
             ],
             "gradient": "bg-gradient-blue-red from-blue-600 to-red-500"
         },
-        
         {
             "name": "Stratos Tech Bot",
             "category": "Discord.js Bot",
@@ -42,12 +56,12 @@
             "project": "stratos-tech-bot",
             "icon": "https://cdn.stratostech.xyz/images/branding/Stratos.png",
             "exampleImage": null,
-            "description": "A bespoke Discord bot developed for Stratos Tech to facilitate Discord server management and task automation.",
+            "description": "An advanced Discord bot engineered for Stratos Tech, designed to streamline server management and automate complex operational tasks.",
             "features": [
-                "Custom API Integration",
-                "Welcome Message with Images",
-                "User Management System",
-                "Ticketing and Transcript System"
+                "Seamless Custom API Integration",
+                "Dynamic Welcome System with Image Support",
+                "Advanced User Management Framework",
+                "Comprehensive Ticketing and Transcript System"
             ],
             "gradient": "bg-gradient-blue-purple from-blue-500 to-purple-600"
         },
@@ -58,44 +72,29 @@
             "project": "acro-bans",
             "icon": "https://cdn.stratostech.xyz/images/websites/Acro.png",
             "exampleImage": "https://cdn.stratostech.xyz/images/websites/Acro-Bans.png",
-            "description": "A collaborative Next.js application for managing Acro bans, developed in partnership with <a className=\"text-blue-400\" href=\"https://stratostech.xyz/staff/azara\">Azara</a>.",
+            "description": "A state-of-the-art Next.js application for managing Acro bans, developed through a strategic partnership with <a className=\"text-blue-400\" href=\"https://stratostech.xyz/staff/azara\">Azara</a>.",
             "features": [
-                "Ban History Viewing",
-                "Modern User Interface",
-                "Steam API Integration",
-                "Comprehensive Ban Details"
+                "Comprehensive Ban History Visualization",
+                "Modern and Intuitive User Interface",
+                "Robust Steam API Integration",
+                "Detailed Ban Information Management System"
             ],
             "gradient": "bg-gradient-green-blue from-green-400 to-blue-500"
         },
         {
-            "name": "Acro Bot",
-            "category": "Discord.js Bot",
-            "status": "Active",
-            "project": "acro-bot",
-            "icon": "https://cdn.stratostech.xyz/images/websites/Acro.png",
-            "exampleImage": null,
-            "description": "A custom Discord bot designed to facilitate the management and automation of tasks within the Acro Discord server.",
-            "features": [
-                "Custom API Integration",
-                "User Activity Logs",
-                "Custom Embed/Message Sender",
-                "Bot Management Panel"
-            ],
-            "gradient": "bg-gradient-green-blue from-green-400 to-blue-500"
-        },
-        {
-            "name": "Stratos Tech Dashboard",
+            "name": "Stratos Tech Website",
             "category": "Next.js Application",
             "status": "Active",
-            "project": "stratos-tech-dashboard",
+            "project": "stratos-tech-website",
+            "url": "https://stratostech.xyz",
             "icon": "https://cdn.stratostech.xyz/images/branding/Stratos.png",
-            "exampleImage": "https://cdn.stratostech.xyz/images/websites/Stratos-Tech-Dashboard.png",
-            "description": "A custom-built Next.js dashboard for Stratos Tech, designed to streamline the management of their various applications.",
+            "exampleImage": "https://cdn.stratostech.xyz/images/websites/Stratos-Tech-Website.png",
+            "description": "A cutting-edge Next.js website meticulously developed for Stratos Tech, designed to effectively showcase their comprehensive suite of services and technological expertise.",
             "features": [
-                "Analytics Dashboard",
-                "API Token Management",
-                "Link Shortener Management",
-                "Discord Bot Management"
+                "Robust Content Management System",
+                "Responsive and Adaptive Multi-page Architecture",
+                "Intuitive Staff Directory Management Interface",
+                "Comprehensive Administrative Control Panel"
             ],
             "gradient": "bg-gradient-blue-purple from-blue-500 to-purple-600"
         }
