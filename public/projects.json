@@ -14,7 +14,8 @@
                 "Multi-page Layout",
                 "User-friendly Staff Directory Management",
                 "Administrative Control Panel"
-            ]
+            ],
+            "gradient": "from-blue-500 to-purple-600"
         },
         {
             "name": "TFR Chapter 4 Website",
@@ -30,7 +31,8 @@
                 "Officers Directory",
                 "Downloadable Resources",
                 "Donation Statistics Dashboard"
-            ]
+            ],
+            "gradient": "from-blue-600 to-red-500"
         },
         
         {
@@ -46,7 +48,8 @@
                 "Welcome Message with Images",
                 "User Management System",
                 "Ticketing and Transcript System"
-            ]
+            ],
+            "gradient": "from-blue-500 to-purple-600"
         },
         {
             "name": "Acro Website",
@@ -61,7 +64,8 @@
                 "Modern User Interface",
                 "Steam API Integration",
                 "Comprehensive Ban Details"
-            ]
+            ],
+            "gradient": "from-green-400 to-blue-500"
         },
         {
             "name": "Acro Bot",
@@ -76,7 +80,8 @@
                 "User Activity Logs",
                 "Custom Embed/Message Sender",
                 "Bot Management Panel"
-            ]
+            ],
+            "gradient": "from-green-400 to-blue-500"
         },
         {
             "name": "Stratos Tech Dashboard",
@@ -91,7 +96,8 @@
                 "API Token Management",
                 "Link Shortener Management",
                 "Discord Bot Management"
-            ]
+            ],
+            "gradient": "from-blue-500 to-purple-600"
         }
     ]
 }

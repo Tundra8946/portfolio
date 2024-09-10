@@ -13,16 +13,10 @@ const Modal = ({ isOpen, onClose, children, size }) => {
             aria-modal="true"
         >
             <div
-                className={`relative bg-gray-800 text-white rounded-lg shadow-lg p-6 transition-transform transform ${size} ${isOpen ? 'scale-100' : 'scale-95'}`}
+                className={`relative pt-0 mb-6 text-gray-900 dark:text-white rounded-lg shadow-lg p-4 transition-transform transform ${size} ${isOpen ? 'scale-100' : 'scale-95'}`}
                 style={{ transition: 'transform 0.3s ease-in-out' }}
             >
-                <button
-                    className="absolute top-4 right-4 text-2xl font-bold text-gray-300 hover:text-gray-100 transition duration-300 ease-in-out"
-                    onClick={onClose}
-                    aria-label="Close modal"
-                >
-                    &times;
-                </button>
+
                 <div id="modal-title" className="text-xl font-semibold mb-4">
                     {children}
                 </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Modal from './Modal';
-import JsxParser from 'react-jsx-parser'; // Import the library
+import JsxParser from 'react-jsx-parser';
 
 let cachedProjectsData = null;
 
@@ -56,7 +56,7 @@ const DetailedViewButton = ({ project }) => {
     };
 
     return (
-        <div className="flex justify-center items-center space-x-4">
+        <>
             <button
                 onClick={handleClick}
                 className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -71,67 +71,103 @@ const DetailedViewButton = ({ project }) => {
 
             {loading && (
                 <Modal isOpen={loading} onClose={() => { }} aria-live="polite">
-                    <div className="w-8 h-8 border-4 border-t-4 border-t-transparent border-white rounded-full animate-spin"></div>
+                    <div className="flex items-center justify-center h-full">
+                        <div className="w-12 h-12 border-4 border-t-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
                 </Modal>
             )}
 
             {error && (
                 <Modal isOpen={Boolean(error)} onClose={handleCloseProjectModal} aria-live="polite">
-                    <h2 className="text-2xl font-bold mb-4 text-red-600">Error</h2>
-                    <p className="text-lg mb-6 text-center">{error}</p>
+                    <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg">
+                        <h2 className="text-2xl font-bold mb-2">Error</h2>
+                        <p className="text-lg">{error}</p>
+                    </div>
                 </Modal>
             )}
 
             {modalData && !loading && !error && (
-                <Modal isOpen={Boolean(modalData)} onClose={handleCloseProjectModal} size="max-w-2xl p-6">
-                    <div className="text-center mb-4">
-                        <Image
-                            src={modalData.icon}
-                            width={120}
-                            height={120}
-                            className='mx-auto mb-4 rounded-full shadow-md'
-                            alt={`${modalData.name} icon`}
-                        />
-                        <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">{modalData.name}</h2>
-                        <div className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                            <JsxParser jsx={modalData.description} /> {/* Render HTML */}
+                <Modal isOpen={Boolean(modalData)} onClose={handleCloseProjectModal} size="max-w-4xl w-full h-full sm:h-auto sm:max-h-[90vh]">
+                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden h-full flex flex-col">
+                        <button
+                            className="absolute top-6 right-6 z-50 p-1 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition duration-300 ease-in-out"
+                            onClick={handleCloseProjectModal}
+                            aria-label="Close modal"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        <div className={`relative h-24 sm:h-32 bg-gradient-to-r ${modalData.gradient}`}>
+                            <Image
+                                src={modalData.icon}
+                                layout="fill"
+                                objectFit="contain"
+                                className="p-2"
+                                alt={`${modalData.name} icon`}
+                            />
+
                         </div>
-                    </div>
-                    <div className="bg-neutral-900 rounded-lg overflow-hidden p-4 mb-4">
-                        <h3 className="text-xl font-semibold mb-2 text-gray-200">Features</h3>
-                        <ul className="list-disc pl-5 text-gray-300">
-                            {modalData.features.map((item, index) => (
-                                <li key={index} className="text-sm mb-1">{item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    {modalData.exampleImage && (
-                        <div className='bg-neutral-900 rounded-lg shadow-lg overflow-hidden p-4'>
-                            <h3 className="text-xl font-semibold mb-3 text-gray-200">Example Image</h3>
-                            <div className='cursor-pointer' onClick={openImageModal}>
-                                <Image
-                                    src={modalData.exampleImage}
-                                    width={800}
-                                    height={450}
-                                    className='w-full h-auto mx-auto rounded-lg shadow-custom'
-                                    alt="Example"
-                                />
+                        <div className="p-4 sm:p-6 overflow-y-auto flex-grow">
+                            <h2 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900 dark:text-gray-100">{modalData.name}</h2>
+                            <div className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                                <JsxParser jsx={modalData.description} />
                             </div>
+                            <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 mb-3">
+                                <h3 className="text-base sm:text-lg font-semibold mb-1 text-gray-800 dark:text-gray-200">Features</h3>
+                                <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+                                    {modalData.features.map((item, index) => (
+                                        <li key={index} className="text-xs">{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            {modalData.exampleImage && (
+                                <div className="rounded-lg overflow-hidden shadow-lg">
+                                    <h3 className="text-base sm:text-lg font-semibold mb-1 text-gray-800 dark:text-gray-200">Example</h3>
+                                    <div className="cursor-pointer" onClick={openImageModal}>
+                                        <Image
+                                            src={modalData.exampleImage}
+                                            width={800}
+                                            height={450}
+                                            layout="responsive"
+                                            className="rounded-lg"
+                                            alt="Example"
+                                        />
+                                    </div>
+                                </div>
+                            )}
                         </div>
-                    )}
+                    </div>
                 </Modal>
             )}
 
-            <Modal isOpen={isImageModalOpen} onClose={closeImageModal} size="max-w-screen-xl max-h-screen">
-                <Image
-                    width={1920}
-                    height={1080}
-                    src={modalData?.exampleImage}
-                    alt="Zoomed Example"
-                    className="max-w-full max-h-full object-contain rounded-xl"
-                />
-            </Modal>
-        </div>
+            {isImageModalOpen && modalData && (
+                <Modal isOpen={isImageModalOpen} onClose={closeImageModal} size="max-w-screen-lg w-full h-full flex items-center justify-center">
+                    <div className="relative w-full h-full flex items-center justify-center bg-black bg-opacity-75">
+                        <div className="relative w-full h-full max-w-4xl max-h-[80vh] flex items-center justify-center">
+                            <Image
+                                width={1920}
+                                height={1080}
+                                src={modalData?.exampleImage}
+                                alt="Zoomed Example"
+                                className="max-w-full max-h-full object-contain rounded-xl"
+                            />
+                        </div>
+                        <button
+                            onClick={closeImageModal}
+                            className="absolute top-4 right-4 p-2 bg-white bg-opacity-50 rounded-full text-black hover:bg-opacity-75 transition-opacity z-10"
+                            aria-label="Close"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </Modal>
+            )}
+        </>
     );
 };
 
