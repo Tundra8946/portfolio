@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import Tundra from '@/public/tundra.png'
+import Tundra from '@/public/projects/tundra.png'
 export default function Header() {
     const pathName = usePathname()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
