@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import Tundra from '@/public/projects/tundra.png'
 export default function Header() {
     const pathName = usePathname()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +16,7 @@ export default function Header() {
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0 flex items-center space-x-3">
                             <Image
-                                src={Tundra}
+                                src="https://cdn.stratostech.xyz/images/Tundra/Tundra.png"
                                 alt="Tundra Profile"
                                 width={40}
                                 height={40}
