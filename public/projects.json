@@ -15,7 +15,7 @@
                 "User-friendly Staff Directory Management",
                 "Administrative Control Panel"
             ],
-            "gradient": "from-blue-500 to-purple-600"
+            "gradient": "bg-gradient-blue-purple from-blue-500 to-purple-600"
         },
         {
             "name": "TFR Chapter 4 Website",
@@ -32,7 +32,7 @@
                 "Downloadable Resources",
                 "Donation Statistics Dashboard"
             ],
-            "gradient": "from-blue-600 to-red-500"
+            "gradient": "bg-gradient-blue-red from-blue-600 to-red-500"
         },
         
         {
@@ -49,7 +49,7 @@
                 "User Management System",
                 "Ticketing and Transcript System"
             ],
-            "gradient": "from-blue-500 to-purple-600"
+            "gradient": "bg-gradient-blue-purple from-blue-500 to-purple-600"
         },
         {
             "name": "Acro Website",
@@ -65,7 +65,7 @@
                 "Steam API Integration",
                 "Comprehensive Ban Details"
             ],
-            "gradient": "from-green-400 to-blue-500"
+            "gradient": "bg-gradient-green-blue from-green-400 to-blue-500"
         },
         {
             "name": "Acro Bot",
@@ -81,7 +81,7 @@
                 "Custom Embed/Message Sender",
                 "Bot Management Panel"
             ],
-            "gradient": "from-green-400 to-blue-500"
+            "gradient": "bg-gradient-green-blue from-green-400 to-blue-500"
         },
         {
             "name": "Stratos Tech Dashboard",
@@ -97,7 +97,7 @@
                 "Link Shortener Management",
                 "Discord Bot Management"
             ],
-            "gradient": "from-blue-500 to-purple-600"
+            "gradient": "bg-gradient-blue-purple from-blue-500 to-purple-600"
         }
     ]
 }

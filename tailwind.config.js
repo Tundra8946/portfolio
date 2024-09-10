@@ -86,6 +86,19 @@ module.exports = {
       scale: {
         '98': '.98'
       },
+      backgroundImage: {
+        'gradient-blue-purple': 'linear-gradient(to right, var(--tw-gradient-stops))',
+        'gradient-blue-red': 'linear-gradient(to right, var(--tw-gradient-stops))',
+        'gradient-green-blue': 'linear-gradient(to right, var(--tw-gradient-stops))',
+      },
+      gradientColorStops: {
+        'blue-500': '#3B82F6',
+        'purple-600': '#9333EA',
+        'blue-600': '#2563EB',
+        'red-500': '#EF4444',
+        'green-400': '#4ADE80',
+        'blue-500': '#3B82F6',
+      },
     },
   },
   plugins: [],
