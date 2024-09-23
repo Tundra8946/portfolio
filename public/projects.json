@@ -3,7 +3,7 @@
         {
             "name": "Acro Bot",
             "category": "Discord.js Bot",
-            "status": "Active",
+            "status": "Disabled",
             "project": "acro-bot",
             "icon": "https://cdn.stratostech.xyz/images/websites/Acro.png",
             "exampleImage": null,
@@ -68,7 +68,7 @@
         {
             "name": "Acro Website",
             "category": "Next.js Application",
-            "status": "Active",
+            "status": "Disabled",
             "project": "acro-bans",
             "icon": "https://cdn.stratostech.xyz/images/websites/Acro.png",
             "exampleImage": "https://cdn.stratostech.xyz/images/websites/Acro-Bans.png",
