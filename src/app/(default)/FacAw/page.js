@@ -16,7 +16,8 @@ function GradientContent() {
             const gradients = [
                 'bg-gradient-blue-purple from-blue-500 to-purple-600',
                 'bg-gradient-blue-red from-blue-600 to-red-500',
-                'bg-gradient-green-blue from-green-400 to-blue-500'
+                'bg-gradient-green-blue from-green-400 to-blue-500',
+                'bg-gradient-blue-purple from-blue-500 to-blue-600'
             ];
 
             const gradientStyles = gradients.map(gradient =>

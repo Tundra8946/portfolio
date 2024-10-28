@@ -97,6 +97,22 @@
                 "Comprehensive Administrative Control Panel"
             ],
             "gradient": "bg-gradient-blue-purple from-blue-500 to-purple-600"
+        },
+        {
+            "name": "Datapad",
+            "category": "Discord.js Bot",
+            "status": "Active",
+            "project": "datapad",
+            "icon": "https://cdn.stratostech.xyz/image/a63e31af77fe72de877d91ec6f6ac699.png",
+            "exampleImage": null,
+            "description": "A highly customizable Discord bot designed to streamline management of a Google Sheets-based roster for a GMOD Star Wars server.",
+            "features": [
+                "Comprehensive automation tools",
+                "Built-in moderation capabilities",
+                "User-configurable settings",
+                "Intuitive and user-friendly interface"
+            ],
+            "gradient": "bg-gradient-blue-purple from-blue-500 to-blue-600"
         }
     ]
 }
