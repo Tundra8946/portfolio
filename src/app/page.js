@@ -6,25 +6,28 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Text Content */}
           <div>
-            <h1 className="text-4xl font-bold text-white mb-4 lg:text-5xl">
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
               <span className="text-blue-400">Tundra&apos;s</span> Portfolio
             </h1>
             <p className="text-2xl text-gray-300 mb-6">
               I am a <TypedText />
             </p>
-            <p className="text-lg text-gray-400 mb-8">
-              Hi, I&apos;m Tundra. An experienced developer specializing in
-              Node.js, with skills across various programming languages. I
-              create flexible and effective solutions for diverse needs,
-              focusing on innovation and quality to support entrepreneurs and
-              propel their projects. Currently, I&apos;m one of the lead
-              developers at Stratos Tech.
+            <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+              Hi, I&apos;m Tundra, an experienced developer specializing in
+              Node.js with skills across various programming languages. I create
+              flexible and effective solutions for diverse needs, focusing on
+              innovation and quality to support entrepreneurs and propel their
+              projects. Currently, I&apos;m one of the lead developers at Stratos
+              Tech.
             </p>
+
+            {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
               <a
-                className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 href="/projects"
+                className="py-3 px-6 shadow-xl inline-flex items-center gap-x-2 text-sm font-semibold rounded-full bg-blue-600 text-white hover:bg-blue-600/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 Projects
                 <svg
@@ -43,8 +46,8 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                className="py-3 px-6 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 href="https://stratostech.xyz"
+                className="py-3 px-6 shadow-xl inline-flex items-center gap-x-2 text-sm font-semibold rounded-full bg-purple-600 text-white hover:bg-purple-600/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 Stratos Tech
                 <svg
@@ -63,11 +66,13 @@ export default function Home() {
                 </svg>
               </a>
             </div>
+
+            {/* Social Links */}
             <div className="flex space-x-4 mb-6">
               <a
-                aria-label="GitHub"
-                className="p-3 rounded-full bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 href="https://github.com/Tundra8946"
+                aria-label="GitHub"
+                className="p-3 rounded-full shadow-xl bg-gray-700 text-white hover:bg-gray-700/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <svg
                   className="w-5 h-5"
@@ -79,9 +84,9 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                aria-label="Discord"
-                className="p-3 rounded-full bg-gray-700 text-white hover:bg-gray-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 href="https://discord.com/users/149692366419263488"
+                aria-label="Discord"
+                className="p-3 rounded-full shadow-xl bg-gray-700 text-white hover:bg-gray-700/50 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
                 <svg
                   className="w-5 h-5"
@@ -94,15 +99,15 @@ export default function Home() {
               </a>
             </div>
             <p className="text-gray-400 text-sm">
-              If you would like to get in touch, please visit the Stratos Tech
-              website.
+              If you would like to get in touch, please visit the Stratos Tech website.
             </p>
           </div>
 
+          {/* Image Section */}
           <div className="relative">
             <Image
               className="rounded-lg shadow-xl"
-              src="https://cdn.stratostech.xyz/images/Tundra/Tundra.png"
+              src="https://cdn.stratostech.xyz/images/Tundra/TundraV2.png"
               alt="Tundra Profile"
               width={600}
               height={600}

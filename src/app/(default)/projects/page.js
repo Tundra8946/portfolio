@@ -1,20 +1,17 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import DetailedViewButton from "@/components/DetailedViewButton";
 
 export default function ProjectsPage() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        // Fetch the projects data
         const fetchData = async () => {
             const response = await fetch("/projects.json");
             const data = await response.json();
             setProjects(data.projects);
         };
-
         fetchData();
     }, []);
 
@@ -34,74 +31,95 @@ export default function ProjectsPage() {
     return (
         <section className="py-16 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-12 text-center">My Projects</h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <div
-                            key={index}
-                            className="group flex flex-col h-full bg-white dark:bg-gray-800 shadow-lg rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 relative"
-                        >
-                            <div className={`h-48 bg-gradient-to-r ${project.gradient} flex items-center justify-center p-4`}>
-                                <Image
-                                    src={project.icon}
-                                    alt={project.name}
-                                    height={112}
-                                    width={112}
-                                    className="object-contain filter drop-shadow-lg"
-                                />
-                            </div>
-                            <div className="p-6 flex flex-col flex-grow">
-                                <div className="flex justify-between items-start mb-4">
-                                    <span className="text-sm font-semibold uppercase text-blue-600 dark:text-blue-400 tracking-wider">
-                                        {project.category}
-                                    </span>
-                                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusStyle(project.status)}`}>
-                                        {project.status}
-                                    </span>
+                <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-12 text-center">
+                    My Projects
+                </h2>
+                {projects.length === 0 ? (
+                    <p className="text-center text-gray-500 dark:text-gray-400">
+                        No projects available at the moment.
+                    </p>
+                ) : (
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {projects.map((project, index) => (
+                            <div
+                                key={index}
+                                className="group relative flex flex-col h-full bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300"
+                            >
+                                {/* Project Image */}
+                                <div
+                                    className={`h-48 bg-gradient-to-r ${project.gradient} flex items-center justify-center p-4`}
+                                >
+                                    <Image
+                                        src={project.icon}
+                                        alt={project.name}
+                                        height={112}
+                                        width={112}
+                                        className="object-contain filter drop-shadow-lg"
+                                    />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                                    {project.name}
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow text-sm leading-relaxed"
-                                    dangerouslySetInnerHTML={{ __html: project.description }}>
-                                </p>
-                            </div>
-                            <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="flex space-x-4">
-                                    {project.url && (
-                                        <a
-                                            href={project.url}
-                                            className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            aria-label="View Website"
+                                {/* Project Details */}
+                                <div className="p-6 flex flex-col flex-grow">
+                                    <div className="flex justify-between items-center mb-4">
+                                        <span className="text-sm font-medium uppercase text-blue-600 dark:text-blue-400 tracking-wide">
+                                            {project.category}
+                                        </span>
+                                        <span
+                                            className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusStyle(
+                                                project.status
+                                            )}`}
                                         >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="20"
-                                                height="20"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                className="lucide lucide-link"
+                                            {project.status}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                                        {project.name}
+                                    </h3>
+                                    <p
+                                        className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed flex-grow"
+                                        dangerouslySetInnerHTML={{
+                                            __html: project.description,
+                                        }}
+                                    />
+                                </div>
+                                {/* Hover Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-70 rounded-lg">
+                                    <div className="flex space-x-4">
+                                        {project.url && (
+                                            <a
+                                                href={project.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                aria-label="View Website"
                                             >
-                                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                                            </svg>
-                                        </a>
-                                    )}
-                                    <DetailedViewButton
-                                        project={`${project.project}`}
-                                        className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        View Details
-                                    </DetailedViewButton>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="20"
+                                                    height="20"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                >
+                                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                                </svg>
+                                            </a>
+                                        )}
+                                        <DetailedViewButton
+                                            project={project.project}
+                                            className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        >
+                                            View Details
+                                        </DetailedViewButton>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     );

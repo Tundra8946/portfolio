@@ -12,8 +12,7 @@ const TypedText = () => {
                 'Node.js Specialist',
                 'Tech Innovator',
                 'Problem Solver',
-                'Lead Developer at Stratos Tech',
-                'Open-Source Contributor'
+                'Lead Developer at Stratos Tech'
             ],
             typeSpeed: 70,
             backSpeed: 50,
