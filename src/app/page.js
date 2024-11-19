@@ -106,13 +106,13 @@ export default function Home() {
           {/* Image Section */}
           <div className="relative">
             <Image
-              className="rounded-lg shadow-xl"
-              src="https://cdn.stratostech.xyz/images/Tundra/TundraV2.png"
+              className="rounded-lg "
+              src="https://cdn.stratostech.xyz/images/Tundra/TundraV2_T.png"
               alt="Tundra Profile"
               width={600}
               height={600}
             />
-            <div className="absolute inset-0 rounded-lg shadow-inner bg-gradient-to-tr from-blue-500/20 via-transparent to-purple-500/20"></div>
+            <div className="absolute inset-0 rounded-lg "></div>
           </div>
         </div>
       </div>
