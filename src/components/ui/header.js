@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <div className="pt-4">
-            <header className="bg-zinc-800 max-w-2xl rounded-xl mx-auto text-gray-100 shadow-xl border border-zinc-900 border-w-12">
+            <header className="bg-zinc-800 max-w-3xl rounded-xl mx-auto text-gray-100 shadow-xl border border-zinc-900 border-w-12">
                 <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex items-center">
@@ -37,6 +37,9 @@ export default function Header() {
                             </NavLink>
                             <NavLink href="/projects" active={pathName === "/projects"}>
                                 Projects
+                            </NavLink>
+                            <NavLink href="/about" active={pathName === "/about"}>
+                                About
                             </NavLink>
                             <NavLink href="/contact" active={pathName === "/contact"}>
                                 Contact
